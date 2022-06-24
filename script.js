@@ -119,12 +119,7 @@ javascript: (function () {
             sw: `${elementID}_resizable_handle_sw`,
             nw: `${elementID}_resizable_handle_nw`,
           },
-          grid: [10, 10],
-          //helper: "ui-resizable-helper",
           create: function (event, ui) {
-            //alert(ui.element);
-            //inspect(event.target, {'onlykey':true});
-
             var width = $(event.target).width();
             var height = $(event.target).height();
             set_position(width, height);
@@ -134,12 +129,10 @@ javascript: (function () {
             var height = $(event.target).height();
             set_position(width, height);
           },
-          alsoResize: "#rect1",
+          //   alsoResize: "#rect1",
         });
 
-        $(".box").draggable({
-          grid: [10, 10],
-        });
+        $(elementID).draggable();
 
         // document.getElementById(`${elementID}`).contentEditable = true;
 
